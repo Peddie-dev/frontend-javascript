@@ -1,34 +1,25 @@
-// main.ts
 
-// 1. Define the Student interface
-interface Student {
-  firstName: string;
-  lastName: string;
-  age: number;
-  location: string;
-}
-
-// 2. Create two students
-const student1: Student = {
+// 1. Create two students as plain objects
+const student1 = {
   firstName: "Douglas",
   lastName: "Barry",
   age: 27,
   location: "Nairobi",
 };
 
-const student2: Student = {
+const student2 = {
   firstName: "Jane",
   lastName: "Doe",
   age: 25,
   location: "Mombasa",
 };
 
-// 3. Put them into an array
-const studentsList: Student[] = [student1, student2];
+// 2. Put them into an array
+const studentsList = [student1, student2];
 
-// 4. Render a table using Vanilla JS (DOM API)
+// 3. Render a table using DOM methods
 const table = document.createElement("table");
-table.border = "1"; // optional border
+table.border = "1"; // simple styling
 
 studentsList.forEach((student) => {
   const row = document.createElement("tr");
@@ -44,5 +35,5 @@ studentsList.forEach((student) => {
   table.appendChild(row);
 });
 
-// 5. Append the table to the body
+// 4. Append the table to the body
 document.body.appendChild(table);
